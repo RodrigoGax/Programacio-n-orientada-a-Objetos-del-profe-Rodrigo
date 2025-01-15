@@ -46,12 +46,26 @@ class Personaje:
         enemigo.vida = enemigo.vida - daño
         print(self.nombre,"ha realizado",daño,"puntos de daño a", enemigo.nombre)
         print("Vida de",enemigo.nombre,"es",enemigo.vida)
+
+class Guerrero(Personaje):
+    
+    #Sobreescribir el constructor
+    def __init__(self,nombre,fuerza, inteligencia, defensa, vida, espada):
+        super().__init__(nombre,fuerza, inteligencia, defensa, vida)
+        self.espada = espada
+
+arturoSuarez = Guerrero("Arturo Suárez", 12, 3000,2,100,.5)
+arturoSuarez.imprimir_atributos()
+print("El valor de espada es: ", arturoSuarez.espada)
+
+    
+ 
         
 #Variable del constructor 
-mi_personaje = Personaje("EsteBandido", 100, 50, 45, 100)
-mi_enemigo = Personaje("Ángel",70,100,70,100)
-mi_personaje.imprimir_atributos()
-mi_personaje.atacar(mi_enemigo)
+# mi_personaje = Personaje("EsteBandido", 100, 50, 45, 100)
+# mi_enemigo = Personaje("Ángel",70,100,70,100)
+# mi_personaje.imprimir_atributos()
+# mi_personaje.atacar(mi_enemigo)
 # mi_personaje.morir()
 #print(mi_personaje.esta_vivo())
 # mi_personaje.subir_nivel(15,5,10)
@@ -63,10 +77,4 @@ mi_personaje.atacar(mi_enemigo)
 # mi_personaje.fuerza = 300
 # mi_personaje.inteligencia = -2
 # mi_personaje.defensa = 30
-# mi_personaje.vida = 2
-
-# print("El nombre de mi personaje es: ",mi_personaje.nombre)
-# print("El fuerza de mi personaje es: ",mi_personaje.fuerza)
-# print("El inteligencia de mi personaje es: ",mi_personaje.inteligencia)
-# print("El defensa de mi personaje es: ",mi_personaje.defensa)
-# print("El vida de mi personaje es: ",mi_personaje.vida)
+# mi_pers
